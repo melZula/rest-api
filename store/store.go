@@ -36,5 +36,5 @@ func (s *Store) Open() error {
 
 // Close ...
 func (s *Store) Close() {
-	// ...
+	s.db.Close()
 }
