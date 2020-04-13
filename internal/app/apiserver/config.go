@@ -1,6 +1,6 @@
 package apiserver
 
-import "../../../store"
+import "../store"
 
 // Config ...
 type Config struct {
