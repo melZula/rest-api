@@ -3,6 +3,7 @@ package sqlstore_test
 import (
 	"testing"
 
+	store ".."
 	"github.com/stretchr/testify/assert"
 
 	"../../model"
@@ -27,7 +28,7 @@ func TestUserRepository_FindByEmail(t *testing.T) {
 	s := sqlstore.New(db)
 	email := "user@example.com"
 	_, err := s.User().FindByEmail(email)
-	assert.Error(t, err)
+	assert.EqualError(t, err, store.ErrRecordNotFound.Error())
 
 	u := model.TestUser(t)
 	u.Email = email

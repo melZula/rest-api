@@ -1,9 +1,8 @@
 package teststore
 
 import (
-	"database/sql"
-
 	store ".."
+	"../../model"
 )
 
 // Store ...
@@ -12,7 +11,7 @@ type Store struct {
 }
 
 // New ...
-func New(db *sql.DB) *Store {
+func New() *Store {
 	return &Store{}
 }
 
@@ -23,6 +22,7 @@ func (s *Store) User() store.UserRepository {
 	}
 	s.userRepository = &UserRepository{
 		store: s,
+		users: make(map[string]*model.User),
 	}
 
 	return s.userRepository
