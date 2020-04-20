@@ -3,7 +3,7 @@ package model_test
 import (
 	"testing"
 
-	"../model"
+	"github.com/melZula/rest-api/internal/app/model"
 	"github.com/stretchr/testify/assert"
 )
 

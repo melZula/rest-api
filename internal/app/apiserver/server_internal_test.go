@@ -5,9 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/melZula/rest-api/internal/app/store/teststore"
 	"github.com/stretchr/testify/assert"
-
-	"../store/teststore"
 )
 
 func TestServer_HandleUsersCreate(t *testing.T) {

@@ -1,6 +1,6 @@
 package store
 
-import "../model"
+import "github.com/melZula/rest-api/internal/app/model"
 
 // UserRepository ...
 type UserRepository interface {

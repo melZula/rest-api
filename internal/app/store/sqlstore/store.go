@@ -3,8 +3,8 @@ package sqlstore
 import (
 	"database/sql"
 
-	store ".."
 	_ "github.com/lib/pq" // ...
+	"github.com/melZula/rest-api/internal/app/store"
 )
 
 // Store ...

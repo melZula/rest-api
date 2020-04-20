@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"net/http"
 
-	"../store/sqlstore"
+	"github.com/melZula/rest-api/internal/app/store/sqlstore"
 )
 
 // Start ...

@@ -3,9 +3,9 @@ package teststore_test
 import (
 	"testing"
 
-	teststore "."
-	store ".."
-	"../../model"
+	"github.com/melZula/rest-api/internal/app/model"
+	"github.com/melZula/rest-api/internal/app/store"
+	"github.com/melZula/rest-api/internal/app/store/teststore"
 	"github.com/stretchr/testify/assert"
 )
 

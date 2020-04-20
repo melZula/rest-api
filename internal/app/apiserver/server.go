@@ -3,8 +3,8 @@ package apiserver
 import (
 	"net/http"
 
-	"../store"
 	"github.com/gorilla/mux"
+	"github.com/melZula/rest-api/internal/app/store"
 	"github.com/sirupsen/logrus"
 )
 

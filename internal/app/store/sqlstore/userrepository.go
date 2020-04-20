@@ -3,8 +3,8 @@ package sqlstore
 import (
 	"database/sql"
 
-	store ".."
-	"../../model"
+	"github.com/melZula/rest-api/internal/app/model"
+	"github.com/melZula/rest-api/internal/app/store"
 )
 
 // UserRepository ...
