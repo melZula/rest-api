@@ -1,3 +1,5 @@
 1. resolve dependences
 2. replace toml parser
 3. add sqlite
+4. more tests
+5. jwt token
