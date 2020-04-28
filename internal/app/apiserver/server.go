@@ -1,6 +1,7 @@
 package apiserver
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"net/http"
@@ -15,13 +16,16 @@ import (
 )
 
 const (
-	sessionName = "zulasession"
+	sessionName        = "zulasession"
+	ctxKeyUser  ctxKey = iota
 )
 
 var (
 	errIncorrectEmailOrPassword = errors.New("incorrect email or password") // cover real error
 	errNotAuthenticated         = errors.New("not authenticated")
 )
+
+type ctxKey int8
 
 type server struct {
 	router       *mux.Router
@@ -70,7 +74,7 @@ func (s *server) authenticateUser(next http.Handler) http.Handler {
 			return
 		}
 
-		next.ServeHTTP(w, r)
+		next.ServeHTTP(w, r.WithContext(context.WithValue(r.Context(), ctxKeyUser, u)))
 	})
 }
 
